@@ -208,7 +208,7 @@ def main(username, password):
         res = hit_carder.post()
         print(res)
         if str(res['e']) == '0':
-            return 0, '打卡成功'
+            return 0, 'shui酱 今日份打卡成功~'
         elif str(res['m']) == '今天已经填报了':
             return 0, '今天已经打卡'
         else:
