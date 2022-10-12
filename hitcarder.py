@@ -186,11 +186,11 @@ def main(username, password):
         res = hit_carder.post()
         print(res)
         if str(res['e']) == '0':
-            return 0, '打卡成功'
+            return 0, 'shui 今日份打卡成功~'
         elif str(res['m']) == '今天已经填报了':
-            return 0, '今天已经打卡'
+            return 0, 'shui 今天已经打卡了呢'
         else:
-            return 1, '打卡失败'
+            return 1, '打卡失败 快联系维护人员'
     except:
         return 1, '打卡数据提交失败'
 
