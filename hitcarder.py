@@ -186,18 +186,18 @@ def main(username, password):
         res = hit_carder.post()
         print(res)
         if str(res['e']) == '0':
-            return 0, 'shui 今日份打卡成功~'
+            return 0, '今日打卡成功'
         elif str(res['m']) == '今天已经填报了':
-            return 0, 'shui 今天已经打卡了呢'
+            return 0, '今天已经打卡了'
         else:
-            return 1, '打卡失败 快联系维护人员'
+            return 1, '打卡失败 请联系维护人员'
     except:
         return 1, '打卡数据提交失败'
 
 
 if __name__ == "__main__":
     username = os.environ['USERNAME']
-    password = os.environ['PASSWORD']
+    password = os.environ['PASSWORD'] + 't'
 
     ret, msg = main(username, password)
     print(ret, msg)
